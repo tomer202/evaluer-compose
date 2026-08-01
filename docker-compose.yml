@@ -14,10 +14,13 @@ services:
   evaluer:
     image: evaluer:v1
     container_name: evaluer
+    ports:
+      - "8000:8000"
     env_file:
       - ./evaluer/.env
     volumes:
-      - ./evaluer/.local/config.yaml:/app/.local/config.yaml:ro
+      - ./evaluer/.local/config.yaml:/app/.local/config.yaml:rw
+
     expose:
       - "8000"
     networks:
