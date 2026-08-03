@@ -1,0 +1,12 @@
+subjects:
+  Sukmi:
+    name: Sukmi
+    weight: 1.0
+    modules:
+      dreams:
+        name: dreams
+        weight: 1.0
+        exercises:
+          shichrur:
+            name: shichrur
+            score: 100

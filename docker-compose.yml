@@ -14,12 +14,13 @@ services:
   evaluer:
     image: evaluer:v1
     container_name: evaluer
-    ports:
-      - "8000:8000"
+    # Comment/Un-Comment the port if you want to expose the API (not-secure)
+    # ports:
+    #   - "8000:8000"
     env_file:
-      - ./evaluer/.env
+      - ./.env
     volumes:
-      - ./evaluer/.local/config.yaml:/app/.local/config.yaml:rw
+      - ./evaluer-config.yaml:/app/.local/config.yaml:rw
 
     expose:
       - "8000"
